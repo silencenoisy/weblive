@@ -202,7 +202,7 @@ def get_sub_data(data):
             "name":room.name,
             "title":room.title,
             "cover":room.cover,
-            "is_live":False if is_live is None else True,
+            "is_live":is_live,
         }
         rdata.append(temp)
 
