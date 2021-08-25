@@ -1,0 +1,250 @@
+
+.live-list .game-live-item {
+    width: 284px!important;
+}
+
+.live-list .game-live-item {
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.live-list .video-info {
+    height: 160px!important;
+}
+
+.game-live-item .video-info .pic {
+    overflow: hidden;
+    position: relative;
+    max-width: none;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.game-live-item .video-info .tag-payRoom, .game-live-item .video-info .tag-recommend {
+    display: block;
+    top: 4px;
+    left: 4px;
+    height: 19px;
+    padding: 0 5px;
+    line-height: 19px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.game-live-item .video-info .tag-recommend {
+    background-color: #232323;
+    background-color: rgba(0,0,0,.4);
+}
+
+.game-live-item .video-info .item-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-out;
+    opacity: 0;
+    background: #000;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    filter: alpha(opacity=0);
+}
+
+.game-live-item .video-info .btn-link__hover_i {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    background: url(https://a.msstatic.com/huya/main3/widget/game-live-item/img/play-icon_fbf7f.png) no-repeat;
+    transform: scale(2);
+    backface-visibility: hidden;
+    transition: all .25s ease-out;
+}
+
+.game-live-item * {
+    box-sizing: border-box;
+}
+
+.game-live-item .video-info * {
+    cursor: pointer;
+}
+.game-live-item .video-info .tag-right {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.game-live-item .video-info .tag-blue {
+    background: #1f69ff;
+    background: rgba(31,105,255,.8);
+}
+
+.game-live-item .title {
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 8px;
+    padding: 0 23px 0 8px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    color: #333;
+    -o-text-overflow: ellipsis;
+}
+
+.game-live-item .txt {
+    display: block;
+    position: relative;
+    height: 23px;
+    padding: 5px 0 0 5px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999;
+}
+
+.game-live-item .avatar {
+    overflow: hidden;
+    position: absolute;
+    left: 7px;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.game-live-item .avatar .nick {
+    float: left;
+    width: 68%;
+    margin-left: 5px;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.game-live-item .txt .num .num-icon {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin: 0 4px 0 2px;
+    vertical-align: -2px;
+    background: url(https://a.msstatic.com/huya/main3/widget/game-live-item/img/people_icon_54347.png);
+}
+
+.game-live-item .avatar {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    left: 7px;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.fl {
+    float: left;
+}
+
+.js-num{
+    float: right;
+}
+
+ul li{
+    list-style: none;
+}
+
+.list-page {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.laypage_main {
+    clear: both;
+    font-size: 0;
+    color: #666;
+}
+
+.laypage_main button:hover, .laypageskin_default .laypage_curr, .laypageskin_default a:hover {
+    color: #fff;
+    border: 1px solid #f80;
+    background-color: #f80;
+}
+
+.laypage_btn{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+margin: 0;
+font: 12px/1.5 -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+font-family: -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+display: inline-block;
+font-size: 12px;
+vertical-align: top;
+border: 1px solid #ccc;
+background-color: #fff;
+height: 28px;
+margin-left: 5px;
+padding: 0 10px;
+color: #666;
+border-radius: 3px;
+line-height: 26px;
+cursor: pointer;
+}
+.list-page{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+font: 12px/1.5 -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+color: #333;
+font-family: -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+font-size: 12px;
+line-height: 1.5;
+padding: 0;
+margin: 30px 0;
+text-align: center;
+}
+
+#js-list-page>div>a{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+font: 12px/1.5 -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+font-family: -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+text-align: center;
+outline: none;
+display: inline-block;
+font-size: 12px;
+vertical-align: top;
+text-decoration: none;
+color: #666;
+cursor: pointer;
+margin: 0 3px 6px;
+height: 28px;
+padding: 0 13px;
+line-height: 28px;
+border: 1px solid #ccc;
+border-radius: 3px;
+background-color: #fff;
+}
+
+.laypage_curr{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+font: 12px/1.5 -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+font-family: -apple-system,BlinkMacSystemFont,Microsoft Yahei,Segoe UI,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+text-align: center;
+display: inline-block;
+font-size: 12px;
+vertical-align: top;
+margin: 0 3px 6px;
+padding: 0 10px;
+height: 28px;
+line-height: 28px;
+border-radius: 3px;
+color: #fff;
+border: 1px solid #f80;
+background-color: #f80;
+}
+
+

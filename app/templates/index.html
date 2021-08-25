@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/css/room.css" rel="stylesheet">
+    <link href="../static/css/lives.css" rel="stylesheet">
+    {#    <link href="../static/css/bootstrap.css" rel="stylesheet">#}
+    <script src="../static/js/jquery-3.5.1.min.js"></script>
+    <script src="../static/js/flv.min.js"></script>
+    {#    <script scr="../static/js/bootstrap.js"></script>#}
+    <script src="../static/js/login.js"></script>   <!-- 登陆  -->
+    <script src="../static/js/lives.js"></script>   <!-- 登陆  -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    {#	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>#}
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-form navbar-left down-menu">
+            <a href="/"><img src="../static/img/logo.jpg" class="img-responsive" width="60" height="20"></a>
+        </div>
+        <!--    下拉菜单开始  -->
+
+        <div class="dropdown navbar-form navbar-left down-menu">
+            <button class="btn btn-default dropdown-toggle down-toggle-btn" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                分类
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <!--    下拉菜单结束  -->
+        <!--    搜索栏开始  -->
+        <form class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">搜索</button>
+            </div>
+        </form>
+        <!--    搜索栏结束  -->
+        <!--    登陆注册按钮开始   -->
+        <ul class="nav navbar-nav navbar-right" id="login-div">
+
+            <li><a data-toggle="modal" data-target="#register" href=""><span class="glyphicon glyphicon-user"></span> 注册</a>
+            </li>
+            <li><a data-toggle="modal" data-target="#login" href=""><span class="glyphicon glyphicon-log-in"></span> 登录</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hide" id="logout-div">
+            <li><a class="home-link" href="" width="30" height="30"><img class="img-circle"
+                                                                         src="../static/img/default.png" alt=""
+                                                                         width="30" height="30"></a></li>
+            <li><a data-toggle="modal" href="" class="home-link" id="usr-home-link"><span
+                    class="glyphicon glyphicon-user"></span> 用户账号</a></li>
+            <li><a data-toggle="modal" data-target="#logout" href="javascript:;" onclick="Logout()"><span
+                    class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+        </ul>
+        <!--    登陆注册按钮开始   -->
+    </div>
+</nav>
+<div id="register" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">注册</h1>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="">用户名</label>
+                        <input class="form-control" type="text" id="register-name" placeholder="彰显个性的名字">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input class="form-control" type="password" id="register-pwd" placeholder="至少6位字母或数字">
+                    </div>
+                    <div class="form-group">
+                        <label for="">再次输入密码</label>
+                        <input class="form-control" type="password" id="register-pwd2" placeholder="至少6位字母或数字">
+                    </div>
+                    <div class="form-group">
+                        <label for="">手机号</label>
+                        <input class="form-control" type="text" id="register-phone" placeholder="中国大陆手机号">
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary" onclick="Register()">提交</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 登录窗口 -->
+<div id="login" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">登录</h1>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="">用户名</label>
+                        <input class="form-control" type="text" name="login-name" id="login-name" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input class="form-control" type="password" name="login-pwd" id="login-pwd" placeholder="">
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary" onclick="Login()">登录</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div><h1>empty</h1></div>
+<a href="/g">点击选择观看的直播类别(估计只有主机游戏有人播~)</a>
+
+
+</body>
+</html>
