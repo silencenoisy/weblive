@@ -135,9 +135,9 @@ function mysub() {
 }
 
 function sub_html(data) {
-    var is_live = "",cover=data['cover'];
-    if(data['is_live']){
-        is_live = "hide";
+    var is_live = "在播",cover=data['cover'];
+    if(!data['is_live']){
+        is_live = "不在播";
     }
     if(!cover){
         cover = "default_cover.png"
@@ -145,8 +145,7 @@ function sub_html(data) {
     return "<li><a href=\"/live/"+data['name']+"\">\n" +
         "                        <img class=\"img-rounded\" width=\"45\" height=\"45\" src=\"../static/img/"+cover+"\">\n" +
         "                            "+data['name']+"\n" +
-        "                        <span class=\""+is_live+"\" style=\"color:peru;\">(在播)</span>\n" +
-        "                        <span class=\""+!is_live+"\" style=\"color:peru;\">(不在播)</span>\n" +
+        "                        <span class=\"\" style=\"color:peru;\">("+is_live+")</span>\n" +
         "                    </a>\n" +
         "                </li>"
 }
