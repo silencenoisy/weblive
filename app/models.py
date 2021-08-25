@@ -100,7 +100,7 @@ class Room(db.Model):
     push_key = db.Column(db.String(100), unique=True, nullable=False)  # 推流秘钥
     pull_key = db.Column(db.String(100), unique=True, nullable=False)  # 拉流秘钥
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"),unique=True)   # 用户外键
-    type_id = db.Column(db.Integer, db.ForeignKey("room_type.id"), unique=True,default=1)  # 类别外键
+    type_id = db.Column(db.Integer, db.ForeignKey("room_type.id"),default=1)  # 类别外键
 
     @staticmethod
     def create_push_key():
